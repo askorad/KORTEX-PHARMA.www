@@ -1,0 +1,372 @@
+/* ===================================
+   Variables CSS
+   =================================== */
+:root {
+    --primary-color: #06271a;
+    --secondary-color: #0d3d2a;
+    --accent-color: #1aaf73;
+    --text-color: #ffffff;
+    --hover-color: #2dd4a0;
+    --glow-color: rgba(26, 175, 115, 0.3);
+}
+
+/* ===================================
+   Reset & Base Styles
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+
+/* ===================================
+   Modern Background Gradient
+   =================================== */
+.background-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-20deg, #06271a 0%, #0d3d2a 50%, #06271a 100%);
+    z-index: 0;
+}
+
+
+/* ===================================
+   Typography
+   =================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+p {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+}
+
+code, pre {
+    font-family: 'Overpass Mono', monospace;
+}
+
+/* ===================================
+   Layout
+   =================================== */
+main {
+    flex: 1;
+    min-height: 0;
+}
+
+/* ===================================
+   Logo Styles
+   =================================== */
+.logo-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 1rem;
+}
+
+.logo-header {
+    max-width: 600px !important;
+    width: 100% !important;
+    height: auto !important;
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));
+    animation: logoFadeIn 1s ease-out;
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+    .logo-header {
+        max-width: 450px !important;
+        width: 450px !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    .logo-header {
+        max-width: 550px !important;
+        width: 550px !important;
+    }
+}
+
+.logo-header:hover {
+    transform: scale(1.02);
+}
+
+@keyframes logoFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo-container img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* ===================================
+   Text Styles
+   =================================== */
+.text-container {
+    max-width: 42rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding: 0 1rem;
+}
+
+/* ===================================
+   Quote Styles with Font Awesome
+   =================================== */
+.quote-container {
+    position: relative;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+    text-align: center;
+}
+
+.quote-icon {
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    line-height: 1;
+}
+
+.quote-left {
+    top: 0;
+    left: 0;
+    transform: translateY(-0.5rem);
+}
+
+.quote-right {
+    bottom: 0;
+    right: 0;
+    transform: translateY(0.5rem);
+}
+
+.quote-text {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-color);
+    font-size: 2rem;
+    line-height: 2.75rem;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0 2rem;
+    font-weight: 200;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Gestion des paragraphes selon les tailles d'écran */
+.quote-desktop,
+.quote-tablet,
+.quote-mobile {
+    display: none;
+}
+
+/* Desktop : affiche uniquement quote-desktop */
+@media (min-width: 769px) {
+    .quote-desktop {
+        display: block;
+    }
+    .quote-tablet,
+    .quote-mobile {
+        display: none;
+    }
+}
+
+/* Tablette : affiche uniquement quote-tablet */
+@media (max-width: 768px) and (min-width: 641px) {
+    .quote-tablet {
+        display: block;
+    }
+    .quote-desktop,
+    .quote-mobile {
+        display: none;
+    }
+}
+
+/* Mobile : affiche uniquement quote-mobile */
+@media (max-width: 640px) {
+    .quote-mobile {
+        display: block;
+    }
+    .quote-desktop,
+    .quote-tablet {
+        display: none;
+    }
+}
+
+/* ===================================
+   Footer Styles
+   =================================== */
+footer {
+    width: 100%;
+    padding: 1rem 1rem;
+    color: var(--accent-color);
+    position: relative;
+}
+
+.footer-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #2dd4a0;
+    text-decoration: underline;
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+/* Tablettes et petits écrans */
+@media (max-width: 1023px) {
+    .logo-header {
+        max-width: 380px !important;
+        width: 380px !important;
+    }
+}
+
+/* Tablettes portrait */
+@media (max-width: 768px) {
+    .logo-header {
+        max-width: 350px !important;
+        width: 350px !important;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 640px) {
+    .logo-header {
+        max-width: 320px !important;
+        width: 320px !important;
+    }
+
+    .logo-container img {
+        max-width: 200px;
+    }
+
+    .text-container {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .quote-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .quote-icon {
+        font-size: 2.5rem;
+    }
+
+    .quote-left {
+        top: 0;
+        left: 0;
+        transform: translateY(-0.5rem);
+    }
+
+    .quote-right {
+        bottom: 0;
+        right: 0;
+        transform: translateY(0.5rem);
+    }
+
+    .quote-text {
+        font-size: 1.625rem;
+        line-height: 2.25rem;
+        padding: 0 1rem;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+    .logo-header {
+        max-width: 280px;
+    }
+
+    .quote-container {
+        padding: 1rem 1rem;
+    }
+
+    .quote-text {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        padding: 0 0.75rem;
+    }
+
+    .quote-icon {
+        font-size: 2.25rem;
+    }
+
+    .quote-left {
+        top: 0;
+        left: 0;
+        transform: translateY(-0.5rem);
+    }
+
+    .quote-right {
+        bottom: 0;
+        right: 0;
+        transform: translateY(0.5rem);
+    }
+}
+
+/* ===================================
+   Animations
+   =================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-container {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.text-container {
+    animation: fadeIn 0.8s ease-out;
+}
+
