@@ -231,6 +231,53 @@ main {
 }
 
 /* ===================================
+   Login Button Styles
+   =================================== */
+.login-button-container {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.login-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: #1aaf73;
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(26, 175, 115, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.login-button:hover {
+    background-color: #2dd4a0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 175, 115, 0.4);
+}
+
+.login-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(26, 175, 115, 0.3);
+}
+
+/* Responsive adjustments for login button */
+@media (max-width: 640px) {
+    .login-button-container {
+        margin-top: 2rem;
+    }
+    
+    .login-button {
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* ===================================
    Footer Styles
    =================================== */
 footer {
