@@ -257,7 +257,7 @@ main {
 .login-button:hover {
     background-color: #2dd4a0;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(26, 175, 115, 0.4);
+    box-shadow: 0 4px 12px rgba(26, 175, 115, 0.3);
 }
 
 .login-button:active {
