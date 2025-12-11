@@ -2,7 +2,7 @@
    Variables CSS
    =================================== */
 :root {
-    --primary-color: #06271a;
+    --primary-color: #052317;
     --secondary-color: #0d3d2a;
     --accent-color: #1aaf73;
     --text-color: #ffffff;
@@ -42,7 +42,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-20deg, #06271a 0%, #0d3d2a 50%, #06271a 100%);
+    background: linear-gradient(-20deg, #052317 0%, #083523 50%, #052317 100%);
     z-index: 0;
 }
 
@@ -240,16 +240,14 @@ main {
 
 .login-button {
     display: inline-block;
-    padding: 1rem 2.5rem;
+    padding: 0.5rem 2.5rem;
     background-color: #1aaf73;
     color: var(--text-color);
     text-decoration: none;
     font-family: 'Outfit', sans-serif;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(26, 175, 115, 0.3);
+    border-radius: 0.3rem;
     position: relative;
     z-index: 1;
 }
